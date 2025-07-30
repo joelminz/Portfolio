@@ -1,0 +1,129 @@
+/* Reset and base setup */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(ellipse at bottom, #0d0d0d 0%, #000000 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Starry background overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/Images/starry-bg.png'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+/* Heading styling */
+.hobby-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 40px 0 20px;
+  background: linear-gradient(to right, #d23eec, #b9a3ae);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Cards container */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 20px 40px;
+}
+
+/* Card styling */
+.card {
+  background: rgba(20, 20, 20, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+.card-header {
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  background-color: transparent;
+}
+
+/* Image section */
+.card-body {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Audio footer */
+.card-footer {
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 0 0 20px 20px;
+}
+
+audio {
+  width: 100%;
+  filter: brightness(1.2);
+  outline: none;
+}
+
+/* Fade-in animation for cards */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-container {
+    padding: 20px;
+  }
+
+  .hobby-heading {
+    font-size: 2rem;
+  }
+}

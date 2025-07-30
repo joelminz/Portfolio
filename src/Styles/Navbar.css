@@ -1,0 +1,32 @@
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  background-color: #1f1f1f;
+  padding: 12px 0;
+  gap: 20px;
+}
+
+.nav-item a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.nav-item a:hover {
+  background-color: #333;
+  border-radius: 8px;
+}
+
+.navbar-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #1f1f1f; /* or any */
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border-bottom: 1px solid #444;
+}
