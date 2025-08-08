@@ -84,6 +84,7 @@ function Home() {
         <h2>
           CONTACT <span className="highlight">ME</span>
         </h2>
+        <form action="https://formspree.io/f/mrblojol" method='post'>
         <fieldset>
           <div className="form-group">
             <label htmlFor="name">Name: </label>
@@ -92,6 +93,10 @@ function Home() {
           <div className="form-group">
             <label htmlFor="email">Email: </label>
             <input type="email" placeholder="Enter your EMAIL" />
+          </div>
+          <div className="form-group">
+            <label htmlFor="text">Reason: </label>
+            <input type="text" placeholder="Enter your reason" />
           </div>
           <div className="form-group">
             <label htmlFor="gender">GENDER: </label>
@@ -106,6 +111,7 @@ function Home() {
             Submit
           </button>
         </fieldset>
+        </form>
       </section>
     </>
   );
