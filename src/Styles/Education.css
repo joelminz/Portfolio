@@ -1,11 +1,9 @@
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-  gap: 20px;
+.education-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
   margin: 40px auto;
-  max-width: 1200px;
+  max-width: 900px;
   padding: 0 20px;
 }
 
@@ -13,10 +11,12 @@
   background-color: #1f1f1f;
   padding: 20px;
   border-radius: 12px;
-  flex: 1 1 300px;
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
   color: white;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .items:hover {
@@ -29,4 +29,12 @@ h1 {
   text-align: center;
   color: white;
   margin-top: 40px;
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 900px) {
+  .education-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
 }

@@ -10,6 +10,7 @@ import Gallery from './Components/Gallery';
 import Education from './Components/Education';
 import Hobby from './Components/Hobby';
 import ScrollToHashElement from './ScrollToHashElement';
+import ScrollToTop from './ScrollToTop';
 
 function App() {
   useEffect(() => {
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <ScrollToHashElement />
       <Routes>

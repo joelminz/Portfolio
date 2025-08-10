@@ -6,7 +6,7 @@ function Education() {
     <>
       <h1 style={{ fontSize: '80px', textAlign: 'center', color: 'white' }}>EDUCATION</h1>
 
-      <div className="container">
+      <div className="education-container">
         {/* 10th */}
         <div className="items items1" data-aos="fade-up" data-aos-delay="0">
           <h2 style={{ textAlign: 'center' }}>10th</h2>
@@ -37,6 +37,16 @@ function Education() {
             <li>College: PES College of Engineering</li>
             <li>University: VTU Belagavi</li>
             <li>6.32 CGPA</li>
+          </ul>
+        </div>
+
+        {/* Internship */}
+        <div className="items items4" data-aos="fade-up" data-aos-delay="300">
+          <h2 style={{ textAlign: 'center' }}>Internship</h2>
+          <br />
+          <ul style={{ color: 'beige' }}>
+            <li>JSpiders</li>
+            <li>MERN Stack</li>
           </ul>
         </div>
       </div>

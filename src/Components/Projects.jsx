@@ -1,7 +1,8 @@
 import React from "react";
 
+
 function Projects() {
-  let projects = [
+  const projects = [
     {
       name: "Decentralized Voting System",
       description:
@@ -29,24 +30,27 @@ function Projects() {
   ];
 
   return (
-    <div className="container pt-3 pb-5 d-flex flex-column align-items-center">
+    <div className="container pt-3 pb-5">
       <h1 className="text-center mt-2 mb-5">My Projects</h1>
-      <div className="row justify-content-center w-100">
+      <div>
         {projects.map((proj, index) => (
-          <div className="col-md-6 col-lg-4 mb-4 d-flex" key={index}>
-            <div className="card shadow w-100">
+          <div className="mb-4" key={index}>
+            <div className="card shadow w-100 mx-3">
               <div className="card-header bg-primary text-white text-center">
                 <h2 className="mb-0">{proj.name}</h2>
               </div>
-              <div className="card-body d-flex flex-column justify-content-center align-items-center">
-                <p className="card-text text-center px-4 py-3">{proj.description}</p>
+              <div className="card-body">
+                <p className="card-text text-center px-4 py-3">
+                  {proj.description}
+                </p>
               </div>
-              <div className="card-footer bg-white d-flex justify-content-center align-items-center">
+              <div className="card-footer text-center">
                 <a
                   href={proj.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-outline-dark"
+                  style={{ color: "red" }}
                 >
                   View on GitHub
                 </a>
